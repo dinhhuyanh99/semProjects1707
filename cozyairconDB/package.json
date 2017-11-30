@@ -1,0 +1,22 @@
+{
+  "name": "cozyaircondb",
+  "version": "1.0.0",
+  "description": "Cozy Air-conditioners database for sem-end project.",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "dinhhuyanh"
+  ],
+  "author": "Dinh Huy Anh",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "express-fileupload": "^0.3.0",
+    "mongoose": "^4.13.5",
+    "nodemon": "^1.12.1"
+  }
+}
