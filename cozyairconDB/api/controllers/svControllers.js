@@ -1,8 +1,10 @@
+'use strict';
 // =====================================
 // Declare dependencies
 // =====================================
 var mongoose = require('mongoose');
 var airConditioner = mongoose.model('airConditioners');
+var brand = mongoose.model('brands');
 // =====================================
 // =====================================
 
@@ -20,7 +22,6 @@ exports.list_all_ac = function(req, res) {
 // =====================================
 exports.add_an_ac = function(req, res) {
 	var new_ac = new airConditioner(req.body);
-	console.log(req.body);
 	new_ac.save(function(err, result){
 		if(err)
 			res.send(err);
@@ -28,8 +29,41 @@ exports.add_an_ac = function(req, res) {
 	});
 };
 // =====================================
-exports.list_all_ac_by_brand = function(req, res) {
-	airConditioner.find({brand: req.params.brand}, function(err, result){
+exports.add_a_brand = function(req, res) {
+	var new_brand = new brand(req.body);
+	new_brand.save(function(err, result){
+		if(err)
+			res.send(err);
+		res.json(result);
+	});
+};
+// =====================================
+exports.update_a_brand = function(req, res) {
+	brand.findOneAndUpdate({_id: req.params.brandId}, req.body, {new: true, upsert: true}, function(err, result){
+		if(err)
+			res.send(err);
+		res.json({message: 'Successfully updated details!'});
+	});
+};
+// =====================================
+exports.list_all_brands = function(req, res) {
+	brand.find({}, function(err, result){
+		if(err)
+			res.send(err);
+		res.json(result);
+	});
+};
+// =====================================
+exports.delete_a_brand = function(req, res) {
+	 brand.remove({_id: req.params.brandId}, function(err, result){
+		if(err)
+			res.send(err);
+		res.json({message: 'Successfully deleted the chosen brand!'});
+	});
+};
+// =====================================
+exports.list_brand_products = function(req, res) {
+	airConditioner.find({brand: req.params.brandId}, function(err, result){
 		if(err)
 			res.send(err);
 		res.json(result);
@@ -37,7 +71,7 @@ exports.list_all_ac_by_brand = function(req, res) {
 };
 // =====================================
 exports.list_ac_by_id = function(req, res) {
-	airConditioner.findById(req.params.id, function(err, result){
+	airConditioner.findById(req.params.acId, function(err, result){
 		if(err)
 			res.send(err);
 		res.json(result);
@@ -45,7 +79,7 @@ exports.list_ac_by_id = function(req, res) {
 };
 // =====================================
 exports.update_ac_by_id = function(req, res) {
-	airConditioner.findOneAndUpdate({_id: req.params.id}, req.body, {new: true}, function(err, result){
+	airConditioner.findOneAndUpdate({_id: req.params.acId}, req.body, {new: true, upsert: true}, function(err, result){
 		if(err)
 			res.send(err);
 		res.json({message: 'Successfully updated details!'});
@@ -53,7 +87,7 @@ exports.update_ac_by_id = function(req, res) {
 };
 // =====================================
 exports.delete_ac_by_id = function(req, res) {
-	airConditioner.remove({_id: req.params.id}, function(err, result){
+	airConditioner.remove({_id: req.params.acId}, function(err, result){
 		if(err)
 			res.send(err);
 		res.json({message: 'Successfully deleted the chosen product!'});

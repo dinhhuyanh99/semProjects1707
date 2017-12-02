@@ -21,8 +21,9 @@ var airConSchema = new Schema ({
 		type: String,
 		required: [true, "Please enter the Model Number!"]
 	},
-	specifications: {
-		type: {
+	specs: [{
+		_id: false,
+		typeOfAC: {
 			type: String,
 			enum: [{
 				values: ['Heating', 'Cooling', 'Both'],
@@ -49,21 +50,19 @@ var airConSchema = new Schema ({
 		powerConsumption: {
 			type: String,
 			required: [true, "Please enter the power consumption value!"]
-		}
-	},
-	dimensions: {
-		inHouseUnit: {
+		},
+		intDimension: {
 			type: String,
 			required: [true, "Please enter the dimensions (W,H,D)"]
 		},
-		outHouseUnit: {
+		extDimension: {
 			type: String,
 			required: [true, "Please enter the dimensions (W,H,D)"]
 		}
-	},
+	}],
 	brand: {
 		type: String,
-		required: [true, "Please enter the brand name with a capitalized initial(Toshiba, Daikin,...)!"]
+		required: [true, "Please choose a company brand!"]
 	},
 	originOfProduct: {
 		type: String,
@@ -73,11 +72,27 @@ var airConSchema = new Schema ({
 		type: String,
 		required: [true, "Please enter the amount of time the product is warranted!"]
 	},
+	createdAt: {
+		type: Date,
+		default: Date.now
+	},
+	updatedAt: {
+		type: Date,
+		default: Date.now
+	},
 	status: {
 		type: Number,
 		default: 1
 	}
 });
+
+var brandSchema = new Schema ({
+	name: {
+		type: String,
+		required: [true, "Please enter the name of the brand!"]
+	}
+});
+
 // ===================================================================================
 // ===================================================================================
 
@@ -87,4 +102,4 @@ var airConSchema = new Schema ({
 // Exports schema to use in other file(in this case, svControllers.js, server.js)
 // ===================================================================================
 module.exports = mongoose.model('airConditioners', airConSchema);
-
+module.exports = mongoose.model('brands', brandSchema);
