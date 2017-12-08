@@ -71,7 +71,7 @@
 }
 .page-footer {
   margin-top: 15px;
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
