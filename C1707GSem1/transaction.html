@@ -53,7 +53,7 @@
 	<div class="container">
 		<div class="row">
 			<!--Thông tin người mua-->
-			<div class="col-xl-6 col-md-6 col-sm-6 col-6">
+			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
 				<form>
 					<div class="form-group">
 						<label for="fullname">Họ và Tên</label>
@@ -71,15 +71,15 @@
 						<label for="note">Ghi chú</label>
 						<textarea type="text" class="form-control" id="note"></textarea>
 					</div>
-					<div class="form-group">
-						<label class="padding5">
-							<input type="radio" name="pay" value="cod">Thanh toán COD
+					<div class="form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" type="radio" name="pay" value="cod">Thanh toán COD
 						</label>
-						<label class="padding5">
-							<input type="radio" name="pay" value="transfer">Chuyển khoản
+						<label class="form-check-label">
+							<input class="form-check-input" type="radio" name="pay" value="transfer">Chuyển khoản
 						</label>
-						<label class="padding5">
-							<input type="radio" name="pay" value="credit">Thẻ tín dụng
+						<label class="form-check-label">
+							<input class="form-check-input" type="radio" name="pay" value="credit">Thẻ tín dụng
 						</label>
 					</div>
 					<button type="reset" class="btn btn-secondary">Reset</button>
@@ -88,10 +88,10 @@
 			</div>
 
 			<!--List sản phẩm-->
-			<div class="col-xl-6 col-md-6 col-sm-6 col-6">
+			<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12">
 				<strong>Đơn hàng</strong>
 				<ul class="list-group">
-					<li class="list-group-item">
+					<li class="alert alert-dismissable list-group-item">
 						<div class="media">
 							<img class="align-self-center mr-3" src="img/dieu-hoa/electrolux-esm09crm-a1-550x160.png" alt="electrolux-esm09crm-a1-550x160" width="150px">
 							<div class="media-body">
@@ -99,25 +99,27 @@
 								<p>Số lượng: 1</p>
 								<p class="mb-0">Giá: <strong class="text-danger">5.890.000₫</strong></p>
 							</div>
+							<button type="button" class="close float-right" data-dismiss="alert">&times;</button>
 						</div>
 					</li>
-					<li class="list-group-item">
+					<li class="alert alert-dismissable list-group-item">
 						<div class="media">
 							<img class="align-self-center mr-3" src="img/dieu-hoa/electrolux-esm09crm-a1-550x160.png" alt="electrolux-esm09crm-a1-550x160" width="150px">
 							<div class="media-body">
 								<h5 class="mt-0 text-primary">Điều hòa Electrolux Inverter 9000 BTU ESV09CRK-A1</h5>
 								<p>Số lượng: 1</p>
-								<p class="mb-0">Giá: <strong class="text-danger">5.890.000₫</strong></p>
+								<p class="mb-0">Giá: <strong class="text-danger">8.390.000₫</strong></p>
 							</div>
+							<button type="button" class="close float-right" data-dismiss="alert">&times;</button>
 						</div>
 					</li>
 				</ul>
 
 				<div class="row">
-					<div class="col-xl-8 col-md-8 col-sm-8 col-8">
+					<div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9">
 						<b>Tổng tiền:</b>
 					</div>
-					<div class="col-xl-4 col-md-4 col-sm-4 col-4">
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
 						<strong class="text-danger">14.280.000₫</strong>
 					</div>
 				</div>
