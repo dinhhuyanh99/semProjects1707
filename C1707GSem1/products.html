@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cozy Air Conditioners</title>
+	<link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" width="175px"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Trang chủ</a>
+					</li>
+					<div class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" id="productsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Điều Hòa</a>
+						<div class="dropdown-menu" aria-labelledby="productsDropdown">
+							<a class="dropdown-item" href="#">Các hãng điều hòa</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Aqua</a>
+							<a class="dropdown-item" href="#">Daikin</a>
+							<a class="dropdown-item" href="#">Electrolux</a>
+							<a class="dropdown-item" href="#">Gree</a>
+							<a class="dropdown-item" href="#">LG</a>
+							<a class="dropdown-item" href="#">Mitsubishi Electric</a>
+							<a class="dropdown-item" href="#">Panasonic</a>
+							<a class="dropdown-item" href="#">Samsung</a>
+							<a class="dropdown-item" href="#">Sharp</a>
+							<a class="dropdown-item" href="#">Toshiba</a>
+						</div>
+					</div>
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
+					<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Tìm</button>
+				</form>
+				<div class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="userAccount" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tài khoản
+					</a>
+					<div class="dropdown-menu" aria-labelledby="userAccount">
+						<a class="dropdown-item" href="#">Giỏ hàng</a>
+						<a class="dropdown-item" href="#">Cài đặt</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Đăng xuất</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<nav aria-label="breadcrumb" role="navigation">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Hãng điều hòa</li>
+			</ol>
+		</nav>
+	</header>
+	<div class="container">
+		<div class="products-list-header">
+			<div class="btn-group" role="group" aria-label="sortingFunctions">
+				<div class="btn-group" role="group" id="sortByBrand">
+					<button class="btn btn-outline-primary dropdown-toggle" href="#" id="brandDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Hãng</button>
+					<div class="dropdown-menu" aria-labelledby="brandDropdown">
+						<a class="dropdown-item" href="#">Aqua</a>
+						<a class="dropdown-item" href="#">Daikin</a>
+						<a class="dropdown-item" href="#">Electrolux</a>
+						<a class="dropdown-item" href="#">Gree</a>
+						<a class="dropdown-item" href="#">LG</a>
+						<a class="dropdown-item" href="#">Mitsubishi Electric</a>
+						<a class="dropdown-item" href="#">Panasonic</a>
+						<a class="dropdown-item" href="#">Samsung</a>
+						<a class="dropdown-item" href="#">Sharp</a>
+						<a class="dropdown-item" href="#">Toshiba</a>
+					</div>
+				</div>
+				<div class="btn-group" id="sortByRangePrice">
+					<button class="btn btn-outline-primary dropdown-toggle" href="#" id="priceDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Giá</button>
+					<div class="dropdown-menu" aria-labelledby="priceDropdown">
+						<a class="dropdown-item" href="#">5 triệu - 7 triệu</a>
+						<a class="dropdown-item" href="#">7 triệu - 9 triệu</a>
+						<a class="dropdown-item" href="#">9 triệu - 11 triệu</a>
+						<a class="dropdown-item" href="#">11 triệu - 15 triệu</a>
+						<a class="dropdown-item" href="#">15 triệu - 20 triệu</a>
+						<a class="dropdown-item" href="#">20 triệu +</a>
+					</div>
+				</div>
+				<div class="btn-group" id="sortByTime">
+					<button class="btn btn-outline-primary dropdown-toggle" href="#" id="chronologicalDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Thời gian</button>
+					<div class="dropdown-menu" aria-labelledby="chronologicalDropdown">
+						<a class="dropdown-item" href="#">Mới - Cũ</a>
+						<a class="dropdown-item" href="#">Cũ - Mới</a>
+					</div>
+				</div>
+				<div class="btn-group" id="sortByPrice">
+					<button class="btn btn-outline-primary dropdown-toggle" href="#" id="chronologicalDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Giá</button>
+					<div class="dropdown-menu" aria-labelledby="chronologicalDropdown">
+						<a class="dropdown-item" href="#">Giá cao - Giá thấp</a>
+						<a class="dropdown-item" href="#">Giá thấp - Giá cao</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="margintop20 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+				<div class="card paddingtop20">
+					<img class="card-img-top img-fluid" style="width:100%" src="img/dieu-hoa/electrolux-esm09crm-a1-550x160.png" alt="Điều hòa Electrolux 9000BTU ESM09CRM-A1.">
+					<div class="card-body">
+						<img src="img/brands/electrolux.png" alt="electrolux" width="100px">
+						<p class="text-primary">Điều hòa Electrolux 9000BTU ESM09CRM-A1.</p>
+						<strong class="text-danger">5.890.000₫</strong>
+						<strike>(6.890.000₫)</strike>
+					</div>
+					<div class="overlay padding10">
+						<h4 class="text-primary overlay-title">Electrolux 9000BTU ESM09CRM-A1</h4>
+						<p>Làm lạnh: Dưới 15 m2 (từ 30 đến 45 m3)</p>
+						<p>Điều hòa 1 chiều (chỉ làm lạnh)</p>
+						<p>Sản xuất tại: Việt Nam</p>
+						<a href="#">Xem chi tiết ></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="margintop20 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+				<div class="card paddingtop20">
+					<img class="card-img-top img-fluid" style="width:100%" src="img/dieu-hoa/electrolux-esm12crm-a1-550x160.png" alt="Điều hòa Electrolux 12000BTU ESM12CRM-A1.">
+					<div class="card-body">
+						<img src="img/brands/electrolux.png" alt="electrolux" width="100px">
+						<p class="text-primary">Điều hòa Electrolux 12000BTU ESM12CRM-A1.</p>
+						<strong class="text-danger">6.690.000₫</strong>
+						<strike>(6.990.000₫)</strike>
+					</div>
+					<div class="overlay padding10">
+						<h4 class="text-primary overlay-title">Electrolux 12000BTU ESM12CRM-A1</h4>
+						<p>Làm lạnh: Từ 15 - 20 m2 (từ 40 đến 60 m3)</p>
+						<p>Điều hòa 1 chiều (chỉ làm lạnh)</p>
+						<p>Sản xuất tại: Việt Nam</p>
+						<a href="#">Xem chi tiết ></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="margintop20 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+				<div class="card paddingtop20">
+					<img class="card-img-top img-fluid" style="width:100%" src="img/dieu-hoa/dieu-hoa-electrolux-esv09crk-a1-550x160.png" alt="Điều hòa Electrolux Inverter 9000 BTU ESV09CRK-A1.">
+					<div class="card-body">
+						<img src="img/brands/electrolux.png" alt="electrolux" width="100px">
+						<p class="text-primary">Điều hòa Electrolux Inverter 9000 BTU ESV09CRK-A1.</p>
+						<strong class="text-danger">8.390.000₫</strong>
+						<strike>(8.990.000₫)</strike>
+					</div>
+					<div class="overlay padding10">
+						<h4 class="text-primary overlay-title">Electrolux Inverter 9000 BTU ESV09CRK-A1</h4>
+						<p>Làm lạnh: Dưới 15 m2 (từ 30 đến 45 m3)</p>
+						<p>Điều hòa 1 chiều (chỉ làm lạnh)</p>
+						<p>Sản xuất tại: Việt Nam</p>
+						<a href="#">Xem chi tiết ></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="margintop20 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+				<div class="card paddingtop20">
+					<img class="card-img-top img-fluid" style="width:100%" src="img/dieu-hoa/dieu-hoa-electrolux-esv12crk-a1-550x160.png" alt="Điều hòa Electrolux Inverter 12000 BTU ESV12CRK-A1.">
+					<div class="card-body">
+						<img src="img/brands/electrolux.png" alt="electrolux" width="100px">
+						<p class="text-primary">Điều hòa Electrolux Inverter 12000 BTU ESV12CRK-A1.</p>
+						<strong class="text-danger">9.890.000₫</strong>
+						<strike>(10.590.000₫)</strike>
+					</div>
+					<div class="overlay padding10">
+						<h4 class="text-primary overlay-title">Electrolux Inverter 12000 BTU ESV12CRK-A1</h4>
+						<p>Làm lạnh: Từ 15 - 20 m2 (từ 40 đến 60 m3)</p>
+						<p>Điều hòa 1 chiều (chỉ làm lạnh)</p>
+						<p>Sản xuất tại: Việt Nam</p>
+						<a href="#">Xem chi tiết ></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="margintop20 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+				<div class="card paddingtop20">
+					<img class="card-img-top img-fluid" style="width:100%" src="img/dieu-hoa/dieu-hoa-toshiba-ras-h13pkcvg-v-550x160.png" alt="Điều hòa Toshiba Inverter 12200 BTU RAS-H13PKCVG-V.">
+					<div class="card-body">
+						<img src="img/brands/toshiba.png" alt="toshiba" width="100px">
+						<p class="text-primary">Điều hòa Toshiba Inverter 12200 BTU RAS-H13PKCVG-V.</p>
+						<strong class="text-danger">13.690.000₫</strong>
+						<strike>(14.690.000₫)</strike>
+					</div>
+					<div class="overlay padding10">
+						<h4 class="text-primary overlay-title">Toshiba Inverter 12200 BTU RAS-H13PKCVG-V</h4>
+						<p>Làm lạnh: Từ 15 - 20 m2 (từ 40 đến 60 m3)</p>
+						<p>Điều hòa 1 chiều (chỉ làm lạnh)</p>
+						<p>Sản xuất tại: Thái Lan</p>
+						<a href="#">Xem chi tiết ></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="margintop20 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+				<div class="card paddingtop20">
+					<img class="card-img-top img-fluid" style="width:100%" src="img/dieu-hoa/may-lanh-toshiba-ras-h18qksg-v--550x160.png" alt="Điều hòa Toshiba 18000BTU RAS-H18QKSG-V.">
+					<div class="card-body">
+						<img src="img/brands/toshiba.png" alt="toshiba" width="100px">
+						<p class="text-primary">Điều hòa Toshiba 18000BTU RAS-H18QKSG-V.</p>
+						<strong class="text-danger">15.790.000₫</strong>
+						<strike>(16.590.000₫)</strike>
+					</div>
+					<div class="overlay padding10">
+						<h4 class="text-primary overlay-title">Toshiba 18000BTU RAS-H18QKSG-V</h4>
+						<p>Làm lạnh: Từ 20 - 30 m2 (từ 60 đến 80 m3)</p>
+						<p>Điều hòa 1 chiều (chỉ làm lạnh)</p>
+						<p>Sản xuất tại: Thái Lan</p>
+						<a href="#">Xem chi tiết ></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="margintop20 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+				<div class="card paddingtop20">
+					<img class="card-img-top img-fluid" style="width:100%" src="img/dieu-hoa/may-lanh-toshiba-ras-h10s3kv-v-ava-550x160-550x160.png" alt="Điều hòa 2 chiều Toshiba Inverter 8500 BTU RAS-H10S3KV-V.">
+					<div class="card-body">
+						<img src="img/brands/toshiba.png" alt="toshiba" width="100px">
+						<p class="text-primary">Điều hòa 2 chiều Toshiba Inverter 8500 BTU RAS-H10S3KV-V.</p>
+						<strong class="text-danger">12.490.000₫</strong>
+						<strike>(13.490.000₫)</strike>
+					</div>
+					<div class="overlay padding10">
+						<h4 class="text-primary overlay-title">Toshiba Inverter 8500 BTU RAS-H10S3KV-V</h4>
+						<p>Làm lạnh: Dưới 15 m2 (từ 30 đến 45 m3)</p>
+						<p>Điều hòa 2 chiều</p>
+						<p>Sản xuất tại: Thái Lan</p>
+						<a href="#">Xem chi tiết ></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="margintop20 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+				<div class="card paddingtop20">
+					<img class="card-img-top img-fluid" style="width:100%" src="img/dieu-hoa/may-lanh-toshiba-ras-h18pkcvg-v-550x160.png" alt="Điều hòa Toshiba Inverter 18000 BTU RAS-H18PKCVG-V.">
+					<div class="card-body">
+						<img src="img/brands/toshiba.png" alt="toshiba" width="100px">
+						<p class="text-primary">Điều hòa Toshiba Inverter 18000 BTU RAS-H18PKCVG-V.</p>
+						<strong class="text-danger">19.090.000₫</strong>
+						<strike>(21.590.000₫)</strike>
+					</div>
+					<div class="overlay padding10">
+						<h4 class="text-primary overlay-title">Toshiba Inverter 18000 BTU RAS-H18PKCVG-V</h4>
+						<p>Làm lạnh: Từ 15 - 20 m2 (từ 40 đến 60 m3)</p>
+						<p>Điều hòa 1 chiều (chỉ làm lạnh)</p>
+						<p>Sản xuất tại: Thái Lan</p>
+						<a href="#">Xem chi tiết ></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="margintop20 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+				<div class="card paddingtop20">
+					<img class="card-img-top img-fluid" style="width:100%" src="img/dieu-hoa/may-lanh-samsung-ar10mvfhgwknsv-550x160.png" alt="Điều hòa Samsung Inverter 9000 BTU AR10MVFHGWKNSV.">
+					<div class="card-body">
+						<img src="img/brands/samsung.png" alt="samsung" width="100px">
+						<p class="text-primary">Điều hòa Samsung Inverter 9000 BTU AR10MVFHGWKNSV.</p>
+						<strong class="text-danger">7.490.000₫</strong>
+						<strike>(8.590.000₫)</strike>
+					</div>
+					<div class="overlay padding10">
+						<h4 class="text-primary overlay-title">Samsung Inverter 9000 BTU AR10MVFHGWKNSV</h4>
+						<p>Làm lạnh: Từ 15 - 20 m2 (từ 40 đến 60 m3)</p>
+						<p>Điều hòa 1 chiều (chỉ làm lạnh)</p>
+						<p>Sản xuất tại: Thái Lan</p>
+						<a href="#">Xem chi tiết ></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="margintop20 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+				<div class="card paddingtop20">
+					<img class="card-img-top img-fluid" style="width:100%" src="img/dieu-hoa/may-lanh-samsung-ar09mcfhawknsv-1-550x160.png" alt="Điều hòa Samsung 9000 BTU AR09MCFHAWKNSV.">
+					<div class="card-body">
+						<img src="img/brands/samsung.png" alt="samsung" width="100px">
+						<p class="text-primary">Điều hòa Samsung 9000 BTU AR09MCFHAWKNSV.</p>
+						<strong class="text-danger">6.490.000₫</strong>
+						<strike>(7.590.000₫)</strike>
+					</div>
+					<div class="overlay padding10">
+						<h4 class="text-primary overlay-title">Samsung 9000 BTU AR09MCFHAWKNSV</h4>
+						<p>Làm lạnh: Từ 15 - 20 m2 (từ 40 đến 60 m3)</p>
+						<p>Điều hòa 1 chiều (chỉ làm lạnh)</p>
+						<p>Sản xuất tại: Thái Lan</p>
+						<a href="#">Xem chi tiết ></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="margintop20 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+				<div class="card paddingtop20">
+					<img class="card-img-top img-fluid" style="width:100%" src="img/dieu-hoa/may-lanh-samsung-ar10mvfsbwknsv-550x160.png" alt="Điều hòa Samsung Inverter 9.100 BTU AR10MVFSBWKNSV.">
+					<div class="card-body">
+						<img src="img/brands/samsung.png" alt="samsung" width="100px">
+						<p class="text-primary">Điều hòa Samsung Inverter 9.100 BTU AR10MVFSBWKNSV.</p>
+						<strong class="text-danger">9.790.000₫</strong>
+						<strike>(10.590.000₫)</strike>
+					</div>
+					<div class="overlay padding10">
+						<h4 class="text-primary overlay-title">Samsung Inverter 9.100 BTU AR10MVFSBWKNSV</h4>
+						<p>Làm lạnh: Từ 15 - 20 m2 (từ 40 đến 60 m3)</p>
+						<p>Điều hòa 1 chiều (chỉ làm lạnh)</p>
+						<p>Sản xuất tại: Thái Lan</p>
+						<a href="#">Xem chi tiết ></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="margintop20 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+				<div class="card paddingtop20">
+					<img class="card-img-top img-fluid" style="width:100%" src="img/dieu-hoa/may-lanh-samsung-ar13mvfhgwknsv1-550x160.png" alt="Điều hòa Samsung Inverter 12000 BTU AR13MVFHGWKNSV.">
+					<div class="card-body">
+						<img src="img/brands/samsung.png" alt="samsung" width="100px">
+						<p class="text-primary">Điều hòa Samsung Inverter 12000 BTU AR13MVFHGWKNSV.</p>
+						<strong class="text-danger">8.890.000₫</strong>
+						<strike>(9.590.000₫)</strike>
+					</div>
+					<div class="overlay padding10">
+						<h4 class="text-primary overlay-title">Samsung Inverter 12000 BTU AR13MVFHGWKNSV</h4>
+						<p>Làm lạnh: Từ 15 - 20 m2 (từ 40 đến 60 m3)</p>
+						<p>Điều hòa 1 chiều (chỉ làm lạnh)</p>
+						<p>Sản xuất tại: Thái Lan</p>
+						<a href="#">Xem chi tiết ></a>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/popper.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+</body>
+</html>
