@@ -9,13 +9,13 @@ module.exports = function(app) {
 	app.route('/aircons')
 		.get(controllers.list_all_ac)
 		.post(controllers.add_an_ac);
-	app.route('/aircons/brand')
+	app.route('/brand')
 		.get(controllers.list_all_brands)
 		.post(controllers.add_a_brand);
-	app.route('/aircons/brand/:brandId')
+	app.route('/brand/:brandId')
 		.put(controllers.update_a_brand)
 		.delete(controllers.delete_a_brand);
-	app.route('/aircons/brand/products/:brandId')
+	app.route('/brand/products/:brandId')
 		.get(controllers.list_brand_products);
 	app.route('/aircons/id/:acId')
 		.get(controllers.list_ac_by_id)

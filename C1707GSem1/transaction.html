@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<title>Thanh toán</title>
+	<link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -9,9 +10,8 @@
 
 <body>
 	<header>
-		<!--Navbar-->
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand" href="#"><img src="img/logo2.png" alt="logo" width="175px"></a>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" width="175px"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 			</button>
@@ -20,16 +20,30 @@
 					<li class="nav-item">
 						<a class="nav-link" href="#">Trang chủ</a>
 					</li>
-					<li class="nav-item active">
-						<a class="nav-link" href="#">Điều Hòa<span class="sr-only">(current)</span></a>
-					</li>
+					<div class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" id="productsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Điều Hòa</a>
+						<div class="dropdown-menu" aria-labelledby="productsDropdown">
+							<a class="dropdown-item" href="#">Các hãng điều hòa</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Aqua</a>
+							<a class="dropdown-item" href="#">Daikin</a>
+							<a class="dropdown-item" href="#">Electrolux</a>
+							<a class="dropdown-item" href="#">Gree</a>
+							<a class="dropdown-item" href="#">LG</a>
+							<a class="dropdown-item" href="#">Mitsubishi Electric</a>
+							<a class="dropdown-item" href="#">Panasonic</a>
+							<a class="dropdown-item" href="#">Samsung</a>
+							<a class="dropdown-item" href="#">Sharp</a>
+							<a class="dropdown-item" href="#">Toshiba</a>
+						</div>
+					</div>
 				</ul>
 				<form class="form-inline my-2 my-lg-0">
 					<input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
-					<button class="btn btn-outline-light my-2 my-sm-0" type="submit">Tìm</button>
+					<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Tìm</button>
 				</form>
 				<div class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle text-white" href="#" id="userAccount" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tài khoản
+					<a class="nav-link dropdown-toggle" href="#" id="userAccount" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tài khoản
 					</a>
 					<div class="dropdown-menu" aria-labelledby="userAccount">
 						<a class="dropdown-item" href="#">Giỏ hàng</a>
@@ -43,7 +57,7 @@
 		<nav aria-label="breadcrumb" role="navigation">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-				<li class="breadcrumb-item"><a href="#">Thanh toán</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Thanh toán</li>
 			</ol>
 		</nav>
 	</header>
