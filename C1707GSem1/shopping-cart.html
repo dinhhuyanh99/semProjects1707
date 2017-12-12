@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cozy Air Conditioners</title>
+	<link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" width="175px"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Trang chủ</a>
+					</li>
+					<div class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" id="productsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Điều Hòa</a>
+						<div class="dropdown-menu" aria-labelledby="productsDropdown">
+							<a class="dropdown-item" href="#">Các hãng điều hòa</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Aqua</a>
+							<a class="dropdown-item" href="#">Daikin</a>
+							<a class="dropdown-item" href="#">Electrolux</a>
+							<a class="dropdown-item" href="#">Gree</a>
+							<a class="dropdown-item" href="#">LG</a>
+							<a class="dropdown-item" href="#">Mitsubishi Electric</a>
+							<a class="dropdown-item" href="#">Panasonic</a>
+							<a class="dropdown-item" href="#">Samsung</a>
+							<a class="dropdown-item" href="#">Sharp</a>
+							<a class="dropdown-item" href="#">Toshiba</a>
+						</div>
+					</div>
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
+					<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Tìm</button>
+				</form>
+				<div class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="userAccount" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tài khoản
+					</a>
+					<div class="dropdown-menu" aria-labelledby="userAccount">
+						<a class="dropdown-item" href="#">Giỏ hàng</a>
+						<a class="dropdown-item" href="#">Cài đặt</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Đăng xuất</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<nav aria-label="breadcrumb" role="navigation">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Giỏ hàng</li>
+			</ol>
+		</nav>
+	</header>
+
+	<div class="container">
+		<h4><strong>Giỏ hàng</strong></h4>
+		<ul class="list-group shopping-cart">
+			<li class="list-group-item product">
+				<div class="media">
+					<img class="align-self-center mr-3" src="img/dieu-hoa/electrolux-esm09crm-a1-550x160.png" alt="electrolux-esm09crm-a1" width="150px">
+					<div class="media-body">
+						<h5 class="mt-0 text-primary product-title">Điều hòa Electrolux 9000BTU ESM09CRM-A1</h5>
+						<p>Số lượng: <input class="product-quantity-counter" type="number" min="1" value="1"></p>
+						<p class="mb-0">Giá: <strong class="text-danger product-price">5890000</strong></p>
+					</div>
+					<button type="button" class="remove-product float-right">&times;</button>
+				</div>
+			</li>
+		</ul>
+		<div class="row">
+			<div class="col-xl-10 col-lg-10 col-md-10 col-sm-6 col-6">
+				<b>VAT:</b>
+			</div>
+			<div class="col-xl-2 col-lg-2 col-md-2 col-sm-6 col-6">
+				<strong class="text-danger" id="vatValue"></strong>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-10 col-lg-10 col-md-10 col-sm-6 col-6">
+				<b>Phí ship:</b>
+			</div>
+			<div class="col-xl-2 col-lg-2 col-md-2 col-sm-6 col-6">
+				<strong class="text-danger" id="shippingValue"></strong>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-10 col-lg-10 col-md-10 col-sm-6 col-6">
+				<b>Tổng tiền:</b>
+			</div>
+			<div class="col-xl-2 col-lg-2 col-md-2 col-sm-6 col-6">
+				<strong class="text-danger" id="totalCartPrice"></strong>
+			</div>
+		</div>
+
+		<div class="row d-flex justify-content-right">
+			<button type="button" class="btn btn-secondary">Quay lại</button>
+			<button type="button" class="btn btn-success">Mua hàng</button>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/popper.js"></script>
+	<script type="text/javascript" src="js/shopping-cart.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+</body>
+</html>
