@@ -70,13 +70,15 @@
 					<div class="media-body">
 						<h5 class="mt-0 text-primary product-title">Điều hòa Electrolux 9000BTU ESM09CRM-A1</h5>
 						<p>Số lượng: <input class="product-quantity-counter" type="number" min="1" value="1"></p>
-						<p class="mb-0">Giá: <strong class="text-danger product-price">5890000</strong></p>
+						<p class="mb-0">Giá: <strong class="text-danger product-price">5890000</strong><span class="text-danger"> VND</span></p>
+						<p class="mb-0">Giá tổng: <strong class="text-danger products-total-price">5890000</strong><span class="text-danger"> VND</span></p>
 					</div>
 					<button type="button" class="remove-product float-right">&times;</button>
 				</div>
 			</li>
 		</ul>
-		<div class="row">
+		<div class="price-display">
+			<div class="row">
 			<div class="col-xl-10 col-lg-10 col-md-10 col-sm-6 col-6">
 				<b>VAT:</b>
 			</div>
@@ -100,16 +102,19 @@
 				<strong class="text-danger" id="totalCartPrice"></strong>
 			</div>
 		</div>
+		</div>
+		
 
 		<div class="row d-flex justify-content-right">
 			<button type="button" class="btn btn-secondary">Quay lại</button>
-			<button type="button" class="btn btn-success">Mua hàng</button>
+			<button type="button" class="btn btn-success" id="checkout-button">Mua hàng</button>
 		</div>
 	</div>
 
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/popper.js"></script>
 	<script type="text/javascript" src="js/shopping-cart.js"></script>
+	<script type="text/javascript">recalculateCart();</script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
 </body>
