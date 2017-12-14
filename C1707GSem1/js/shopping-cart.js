@@ -4,9 +4,13 @@ var fadeTime = 300;
 
 function recalculateCart() {
 	var subTotal = 0;
-	$('.product').each(function(){
-		subTotal += parseFloat($('.products-total-price').text());
-	});
+	if($('.product').length < 1) {
+		subTotal = 0;
+	} else {
+		$('.product').each(function(){
+			subTotal += parseFloat($('.products-total-price').text());
+		});
+	}
 	var tax = subTotal * vatRate;
 	var shipping = (subTotal > 0 ? shippingRate : 0)
 	var totalPrice = subTotal + tax + shipping;
@@ -16,7 +20,7 @@ function recalculateCart() {
 }
 
 function removeProduct(removeButton) {
-	var productItem = $(removeButton).parent();
+	var productItem = $(removeButton).parent().parent();
 	productItem.slideUp(fadeTime, function(){
 		productItem.remove();
 		recalculateCart();
